@@ -1,0 +1,10 @@
+.tabelka {
+  border:1px solid black;
+  padding: 1px;
+  min-width:30%;
+}
+.tabelka td{
+  border:1px solid black;
+  padding: 5px;
+  text-align:center;
+}
