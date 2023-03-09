@@ -1,21 +1,23 @@
-  <script>
-    const url = 'http://imiki.pl/cf';
-    const tableBody = document.querySelector('#dane tbody');
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Dane z http://imiki.pl/cf/</title>
+  </head>
+  <body>
+    <table id="dane">
+      <thead>
+        <tr>
+          <th>Time Stamp</th>
+          <th>Chanel</th>
+          <th>Server Name</th>
+          <th>Version</th>
+          <th>Data</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
 
-    fetch(url)
-      .then(response => response.json())
-      .then(data => {
-        data.forEach(row => {
-          const tr = document.createElement('tr');
-          tr.innerHTML = 
-            <td>${row.timeStamp}</td>
-            <td>${row.chanel}</td>
-            <td>${row.servername}</td>
-            <td>${row.ver}</td>
-            <td>${row.data}</td>
-          ;
-          tableBody.appendChild(tr);
-        });
-      })
-      .catch(error => console.error(error));
-  </script>
+    <script src="script.js"></script>
+  </body>
+</html>
